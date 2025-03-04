@@ -6,11 +6,14 @@ import Register from "../Pages/Register/Register";
 import MyMap from "../Pages/MyMap/MyMap";
 import About from "../Pages/About/About";
 import estates from "../../public/catagory.json"
+import Errorpage from "../Pages/Errorpage/Errorpage";
+import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Errorpage></Errorpage>,
     children: [
       {
         path: "/",
@@ -33,10 +36,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>,
       },
-      // {
-      //   path: "/animate",
-      //   element: <Animate></Animate>,
-      // },
+      {
+        path: "/property/:id", // Dynamic route for property details
+        element: <PropertyDetails></PropertyDetails>
+    },
       // Uncomment and define these routes if needed
       // {
       //   path: "/news/:id",
