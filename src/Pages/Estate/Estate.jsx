@@ -111,13 +111,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'; // Import Link
-import ProtectedRoute from '../../routes/ProtectedRoute';
+// import ProtectedRoute from '../../routes/ProtectedRoute';
 
 const Estate = ({ estates }) => {
     return (
 
 
-        <ProtectedRoute>
+        
             <div className="p-6 bg-gray-50 min-h-screen">
                 <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
                     Estate Listings
@@ -189,7 +189,7 @@ const Estate = ({ estates }) => {
                 </div>
             </div>
 
-        </ProtectedRoute>
+        
 
     );
 };
