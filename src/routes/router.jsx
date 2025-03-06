@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 import estates from "../../public/catagory.json"
 import Errorpage from "../Pages/Errorpage/Errorpage";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home estates={estates}></Home>
+        element:<ProtectedRoute><Home estates={estates}></Home></ProtectedRoute> 
        
       },
       {
