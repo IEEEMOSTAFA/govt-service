@@ -8,9 +8,9 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const slides = [
   {
-    image: "https://i.ibb.co/VY1bRxNF/real-1.jpg",
-    title: "Find Your Dream Home",
-    description: "Explore the best properties tailored for you.",
+    image: "https://i.ibb.co/w9ZQmBG/Bangladesh-court.jpg",
+    title: "Find Your National Court",
+    description: "Explore the best tribunal in our country.",
   },
   {
     image: "https://i.ibb.co/j9gKPg0t/real-2.jpg",         
@@ -18,9 +18,9 @@ const slides = [
     description: "Experience the finest living spaces national Security.",
   },
   {
-    image: "https://i.ibb.co/S76xNwqQ/real-3.jpg",
-    title: "Invest in Your Future to the Library",
-    description: "Browse our exclusive real estate listings.",
+    image: "https://i.ibb.co/RTVykfYm/Hospital.jpg",
+    title: "Invest in Your Future to the Health Sector",
+    description: "Browse our exclusive health care center.",
   },
 ];
 

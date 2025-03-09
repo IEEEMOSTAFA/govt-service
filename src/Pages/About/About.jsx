@@ -61,7 +61,7 @@ const About = () => {
                         <div className="team-member card w-72 bg-base-100 shadow-xl">
                             <figure className="px-10 pt-10">
                                 <img
-                                    src="https://i.ibb.co/SwgXjYLP/16607.jpg"
+                                    src="https://i.ibb.co/jkDWNBPG/CEO.jpg"
                                     alt="Team Member 1"
                                     className="rounded-full"
                                 />
@@ -76,7 +76,7 @@ const About = () => {
                         <div className="team-member card w-72 bg-base-100 shadow-xl">
                             <figure className="px-10 pt-10">
                                 <img
-                                    src="https://i.ibb.co/SwgXjYLP/16607.jpg"
+                                    src="https://i.ibb.co/nWYSN5W/CTO-img.jpg"
                                     alt="Team Member 2"
                                     className="rounded-full"
                                 />

@@ -1,34 +1,4 @@
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-// import 'leaflet/dist/leaflet.css';
-
-// const MyMap = () => {
-//   return (
-//     <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "400px", width: "100%" }}>
-//       <TileLayer 
-//         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
-//       />
-//       <Marker position={[51.505, -0.09]}>
-//         <Popup> A sample marker in London </Popup>
-//       </Marker>
-//     </MapContainer>
-//   );
-// };
-
-// export default MyMap;
-
-
-
-
-
-
-
-
-
-
-
-import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import  { useState } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const MyMap = () => {
@@ -58,29 +28,27 @@ const MyMap = () => {
 
   return (
     <div>
-        <Navbar></Navbar>
+      <Navbar />
 
-        <div className="flex flex-col items-center gap-4 p-4">
-      <button
-        onClick={handleShowMap}
-        className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
-      >
-        {showMap ? "Refresh Location" : "Show My Location"}
-      </button>
+      <div className="flex flex-col items-center gap-4 p-4">
+        <button
+          onClick={handleShowMap}
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
+        >
+          {showMap ? "Refresh Location" : "Show My Location"}
+        </button>
 
-      {showMap && location && (
-        <div className="w-full max-w-2xl h-96">
-          <MapContainer center={[location.lat, location.lng]} zoom={15} style={{ height: "100%", width: "100%" }}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[location.lat, location.lng]}>
-              <Popup> You are here! 📍 </Popup>
-            </Marker>
-          </MapContainer>
-        </div>
-      )}
+        {showMap && location && (
+          <div className="w-full max-w-2xl">
+            <img
+              src={`https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=15&size=600x400&markers=color:red%7C${location.lat},${location.lng}&key=YOUR_GOOGLE_MAPS_API_KEY`}
+              alt="Map showing your location"
+              className="rounded-lg shadow-md"
+            />
+          </div>
+        )}
+      </div>
     </div>
-    </div>
-    
   );
 };
 
